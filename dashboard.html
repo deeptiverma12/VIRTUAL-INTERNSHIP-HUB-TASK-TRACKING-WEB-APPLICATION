@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+<h2>Welcome, {{ user }}</h2>
+<p>Domain: {{ domain }}</p>
+<p>Progress: {{ progress }}</p>
+<h3>Assigned Tasks</h3>
+<ul>
+  {% for task in assigned %}
+    <li>
+      {{ task }}
+      <form method="POST" action="/complete" style="display:inline;">
+        <input type="hidden" name="task" value="{{ task }}">
+        <button type="submit">Mark Complete</button>
+      </form>
+    </li>
+  {% else %}
+    <li>No tasks assigned. <a href="/assign">Get New Task</a></li>
+  {% endfor %}
+</ul>
+<a href="/assign">Assign New Task</a> |
+<a href="/logout">Logout</a>
+</div>
+</body>
+</html>
