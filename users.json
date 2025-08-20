@@ -1,1 +1,14 @@
-
+{
+    "mayank": {
+        "password": "123",
+        "domain": "Data Analysis",
+        "tasks_completed": [
+            "Clean null values",
+            "Summarize insights from the data",
+            "Analyze correlation between features",
+            "Create a bar chart using matplotlib",
+            "Import a dataset using pandas"
+        ],
+        "assigned_tasks": []
+    }
+}
