@@ -1,1 +1,21 @@
-
+<!DOCTYPE html>
+<html>
+<head><title>Signup</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+<h2>Signup</h2>
+<form method="POST">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <select name="domain" required>
+        <option value="">Select Domain</option>
+        <option>Web Development</option>
+        <option>Data Analysis</option>
+        <option>Backend Development</option>
+    </select>
+    <button type="submit">Signup</button>
+</form>
+<a href="/login">Already have an account? Login</a>
+</div>
+</body>
+</html>
